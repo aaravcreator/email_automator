@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-lg-12">
+          <h2>Enter Message to Send</h2>
+          <form action="" method="get">
+            <label for="message">Message to Send</label>
+            <input type="text" id="message" class="input input-group" name="message" required>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+       <!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="m-0">SEND SINGLE EMAIL</h5>
+            </div>
+            <div class="card-body">
+              <h6 class="card-title">YOU CAN SEND SINGLE EMAIL to a EMAIL ADDRESS</h6>
+
+              <p class="card-text">{{blog.body}}</p>
+              <a href="{% url 'send_single_mail'%}" class="btn btn-primary">SEND SINGLE EMAIL <i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <!-- <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h5 class="m-0">Featured</h5>
+            </div>
+            <div class="card-body">
+              <h6 class="card-title">Special title treatment</h6>
+
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div> -->
+        </div> 
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="m-0">SEND BULK EMAIL</h5>
+            </div>
+            <div class="card-body">
+              <h6 class="card-title">YOU CAN SEND EMAIL number of  EMAIL address</h6>
+
+              <p class="card-text">{{blog.body}}</p>
+              <a href="{% url 'send_bulk' %}" class="btn btn-success">SEND BULK EMAIL <i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-6 -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content -->
+{% endblock content %}
